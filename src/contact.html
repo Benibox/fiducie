@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DFS Advisory - Contact et rendez-vous</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Contact DFS Advisory : téléphone, email, adresse et formulaire pour échanger sur vos besoins fiduciaires."
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo-mark">DFS</div>
+          <div class="brand-text">
+            <span class="brand-name">DFS Advisory</span>
+            <span class="brand-tagline">Fiduciaire suisse indépendante</span>
+          </div>
+        </div>
+        <nav class="main-nav" id="primary-navigation">
+          <a href="index.html#hero">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="partenariats.html">Partenariats</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="contact" class="section contact-section">
+        <div class="container contact-grid">
+          <div>
+            <p class="section-kicker">Prendre contact</p>
+            <h1>Parlons de vos besoins</h1>
+            <p class="section-intro">
+              Que vous soyez une entreprise ou un particulier, nous étudions votre situation pour vous proposer un accompagnement
+              adapté.
+            </p>
+
+            <div class="contact-items">
+              <div class="contact-item">
+                <span class="contact-icon">☎</span>
+                <div>
+                  <p class="contact-label">Téléphone</p>
+                  <a href="tel:+41227005909" class="contact-value">+41 22 700 59 09</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-icon">@</span>
+                <div>
+                  <p class="contact-label">Email</p>
+                  <a href="mailto:info@dfsadvisory.ch" class="contact-value">info@dfsadvisory.ch</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <div>
+                  <p class="contact-label">Adresse</p>
+                  <p class="contact-value">
+                    Rue du Jeu-De-L’Arc 15<br />
+                    1207 Genève, Suisse
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="nom">Nom</label>
+                <input id="nom" type="text" name="nom" placeholder="Votre nom" />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="vous@example.com" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="telephone">Téléphone</label>
+                <input id="telephone" type="tel" name="telephone" placeholder="+41 ..." />
+              </div>
+              <div class="form-field">
+                <label for="sujet">Sujet</label>
+                <input id="sujet" type="text" name="sujet" placeholder="Objet de votre demande" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Décrivez votre besoin"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Envoyer la demande</button>
+            <p class="form-note">
+              Ce formulaire est un exemple statique. Intégrez-le à votre back-end ou service d’emailing existant dans votre projet.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">DFS Advisory Sàrl</span>
+          <span class="footer-meta">Fiduciaire à Genève</span>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#hero">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">Mentions légales</a>
+        </div>
+        <div class="footer-copy">
+          <span>© {year} DFS Advisory Sàrl. Tous droits réservés.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
