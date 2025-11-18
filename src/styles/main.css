@@ -215,6 +215,83 @@ h3 {
   gap: 3rem;
 }
 
+.hero-top {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-top-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  border-radius: var(--radius-lg);
+  background: rgba(10, 20, 45, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  flex: 1 1 240px;
+  min-width: 240px;
+}
+
+.hero-top-logo {
+  background: var(--white);
+  color: var(--blue-deep);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  padding: 0.65rem 0.85rem;
+  border-radius: 12px;
+}
+
+.hero-top-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.hero-top-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  margin: 0;
+}
+
+.hero-top-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(229, 231, 235, 0.85);
+}
+
+.hero-top-photo {
+  flex: 1 1 280px;
+  border-radius: var(--radius-lg);
+  min-height: 180px;
+  background-image: linear-gradient(120deg, rgba(2, 6, 23, 0.3), rgba(2, 6, 23, 0.7)),
+    url('https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?auto=format&fit=crop&w=1200&q=60');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.hero-photo-label {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  left: 1.2rem;
+  margin: 0;
+  font-size: clamp(1.5rem, 2.3vw + 0.5rem, 2.4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--white);
+  font-weight: 600;
+}
+
 .hero-kicker {
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -751,6 +828,15 @@ h3 {
 @media (max-width: 768px) {
   .header-inner {
     padding-inline: 1rem;
+  }
+
+  .hero-top {
+    flex-direction: column;
+  }
+
+  .hero-top-brand,
+  .hero-top-photo {
+    width: 100%;
   }
 
   .main-nav {
