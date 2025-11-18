@@ -12,6 +12,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(__dirname, 'src/index.html'),
+        vision: resolve(__dirname, 'src/vision.html'),
         services: resolve(__dirname, 'src/services.html'),
         partenariats: resolve(__dirname, 'src/partenariats.html'),
         contact: resolve(__dirname, 'src/contact.html'),
