@@ -272,7 +272,7 @@ h3 {
   border-radius: var(--radius-lg);
   min-height: 180px;
   background-image: linear-gradient(120deg, rgba(2, 6, 23, 0.3), rgba(2, 6, 23, 0.7)),
-    url('https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?auto=format&fit=crop&w=1200&q=60');
+    url('../assets/Unknown.jpeg');
   background-size: cover;
   background-position: center;
   position: relative;
