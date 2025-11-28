@@ -1,7 +1,7 @@
 :root {
-  --blue-deep: #0b1d3a;
-  --blue-dark: #112b54;
-  --blue-soft: #e6edf7;
+  --blue-deep: #002250;
+  --blue-dark: #00306b;
+  --blue-soft: #e6f0fb;
   --beige-soft: #f3efe7;
   --beige: #e3dccf;
   --text-main: #111827;
@@ -94,7 +94,7 @@ h3 {
   top: 0;
   z-index: 30;
   backdrop-filter: blur(14px);
-  background: rgba(11, 29, 58, 0.9);
+  background: rgba(0, 34, 80, 0.9);
   color: var(--white);
 }
 
@@ -111,28 +111,12 @@ h3 {
   gap: 0.85rem;
 }
 
-.logo-mark {
-  background: var(--white);
-  color: var(--blue-deep);
-  font-weight: 600;
-  padding: 0.25rem 0.5rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-name {
-  font-size: 0.95rem;
-}
-
-.brand-tagline {
-  font-size: 0.7rem;
-  opacity: 0.8;
+.brand-logo {
+  height: 58px;
+  width: auto;
+  display: block;
+  transform: scale(3);
+  transform-origin: left center;
 }
 
 .main-nav {
@@ -201,7 +185,7 @@ h3 {
 
 .hero {
   background: radial-gradient(circle at 80% 0%, rgba(227, 220, 207, 0.18), transparent 60%),
-    linear-gradient(135deg, var(--blue-deep), #050b1a);
+    linear-gradient(135deg, var(--blue-deep), #001a3d);
   color: var(--white);
   padding: 5.5rem 0 5rem;
   position: relative;
@@ -818,7 +802,7 @@ h3 {
 }
 
 .contact-section {
-  background: radial-gradient(circle at 0% 0%, rgba(17, 43, 84, 0.14), transparent 58%), #0b1d3a;
+  background: radial-gradient(circle at 0% 0%, rgba(0, 34, 80, 0.14), transparent 58%), #002250;
   color: var(--white);
 }
 
@@ -1019,7 +1003,7 @@ h3 {
   .main-nav {
     position: absolute;
     inset: 3.1rem 1rem auto;
-    background: rgba(11, 29, 58, 0.98);
+    background: rgba(0, 34, 80, 0.98);
     flex-direction: column;
     align-items: flex-start;
     padding: 0.75rem 0.9rem 0.9rem;
@@ -1044,6 +1028,10 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  .brand-logo {
+    transform: scale(2.6);
+  }
+
   .section {
     padding: 3.5rem 0;
   }
@@ -1081,6 +1069,17 @@ h3 {
   padding: 6rem 1.5rem 6rem;
   width: 100%;
   transform: translateX(-5rem);
+}
+.landing-portrait {
+  display: flex;
+  justify-content: center;
+}
+
+.landing-portrait-image {
+  display: block;
+  width: min(760px, 100%);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
 }
 
 .landing-visual-label {
