@@ -2,14 +2,92 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>DFS Advisory - Vision du fondateur</title>
+    <title>Notre Vision | Expert-Comptable Diplômé Genève | DFS Advisory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Découvrez la vision, les valeurs et le parcours de Dominik Spiess, fondateur de DFS Advisory."
+      content="Dominik Spiess, expert-comptable diplômé et fondateur de DFS Advisory Genève. 25 ans d'expérience en audit, fiscalité et conseil pour entreprises suisses."
     />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.dfsadvisory.ch/vision.html" />
+    <meta property="og:title" content="Notre Vision | Expert-Comptable Diplômé Genève" />
+    <meta property="og:description" content="Dominik Spiess, expert-comptable diplômé. 25 ans d'expérience en audit et fiscalité." />
+    <meta property="og:image" content="https://www.dfsadvisory.ch/assets/ethan.png" />
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="CH-GE" />
+    <meta name="geo.placename" content="Genève" />
+
+    <link rel="canonical" href="https://www.dfsadvisory.ch/vision.html" />
     <link rel="stylesheet" href="styles/main.css" />
     <script src="scripts/main.js" type="module" defer></script>
+
+    <!-- Person Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dominik Spiess",
+      "jobTitle": "Expert-comptable diplômé, Expert Réviseur agréé ASR",
+      "worksFor": {
+        "@type": "AccountingService",
+        "name": "DFS Advisory Sàrl",
+        "url": "https://www.dfsadvisory.ch"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Genève",
+        "addressCountry": "CH"
+      },
+      "alumniOf": [
+        {
+          "@type": "Organization",
+          "name": "Grant Thornton"
+        },
+        {
+          "@type": "Organization",
+          "name": "Baker Tilly"
+        },
+        {
+          "@type": "Organization",
+          "name": "Arthur Andersen"
+        }
+      ],
+      "knowsAbout": ["Audit", "Fiscalité", "Comptabilité suisse", "Révision comptable"],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Expert-comptable",
+        "occupationLocation": {
+          "@type": "City",
+          "name": "Genève"
+        }
+      }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://www.dfsadvisory.ch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Vision",
+          "item": "https://www.dfsadvisory.ch/vision.html"
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -95,7 +173,8 @@
       <div class="container footer-inner">
         <div class="footer-brand">
           <span class="footer-logo">DFS Advisory Sàrl</span>
-          <span class="footer-meta">Fiduciaire à Genève</span>
+          <span class="footer-meta">Expert-comptable diplômé à Genève</span>
+          <span class="footer-meta">Fiduciaire agréée ASR - Suisse romande</span>
         </div>
         <div class="footer-links">
           <a href="index.html#hero">Accueil</a>
@@ -104,8 +183,14 @@
           <a href="contact.html">Contact</a>
           <a href="#">Mentions légales</a>
         </div>
+        <div class="footer-service-area">
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin: 0;">
+            <strong>Zones d'intervention :</strong> Genève, Vaud, Valais, Fribourg •
+            Eaux-Vives, Plainpalais, Champel, Carouge
+          </p>
+        </div>
         <div class="footer-copy">
-          <span>© {year} DFS Advisory Sàrl. Tous droits réservés.</span>
+          <span>© {year} DFS Advisory Sàrl. Tous droits réservés. Fiduciaire et expert-comptable à Genève.</span>
         </div>
       </div>
     </footer>
