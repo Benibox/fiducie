@@ -53,83 +53,290 @@
       <section id="services" class="section section-alt">
         <div class="container">
           <div class="service-list">
-            <article id="service-fiscalite" class="service-item">
+            <!-- Service 01: Fiscalité -->
+            <article id="service-fiscalite" class="service-item-expandable">
               <div class="service-item-header">
                 <span class="service-badge">01</span>
-                <div>
+                <div class="service-item-title-block">
                   <h3>Fiscalité des personnes physiques</h3>
                   <p class="service-item-intro">
-                    Accompagnement complet des dirigeants, indépendants et particuliers pour une conformité fiscale sans faille.
+                    Ne redoutez plus la période fiscale et prenez le contrôle de votre fiscalité personnelle !<br>
+                    Entre complexité et délais à respecter, il est facile de se sentir submergé. Chez DFS Advisory, notre mission est de vous apporter sérénité et efficacité en vous accompagnant dans :
                   </p>
                 </div>
               </div>
-              <ul class="service-item-details">
-                <li>Établissement et dépôt des déclarations fiscales</li>
-                <li>Suivi et contrôle des taxations</li>
-                <li>Correspondance avec l’administration fiscale</li>
-                <li>Suivi des réclamations</li>
-                <li>Tax planning</li>
-              </ul>
+              <button class="service-expand-btn" aria-expanded="false">
+                <span class="expand-text">Voir les détails</span>
+                <svg class="expand-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 7.5l5 5 5-5"/>
+                </svg>
+              </button>
+
+              <div class="service-item-content">
+                <div class="service-detail-section">
+                  <h4><span class="section-icon icon-document"></span>L'établissement et le dépôt des déclarations de revenus et de fortune</h4>
+                  <ul>
+                    <li>Préparation complète et précise de vos déclarations</li>
+                    <li>Dépôt dans les délais légaux pour éviter les risques de pénalité</li>
+                    <li>Gestion des situations complexes avec rigueur et fiabilité</li>
+                    <li>Garantir une conformité fiscale</li>
+                  </ul>
+                </div>
+
+                <div class="service-detail-section">
+                  <h4><span class="section-icon icon-search"></span>Le suivi et le contrôle de la taxation</h4>
+                  <ul>
+                    <li>Vérifications de la décision de taxation et de la justesse de votre imposition</li>
+                    <li>Assistance en cas de demandes de l'administration fiscale</li>
+                    <li>Rédaction des éventuelles réclamations</li>
+                  </ul>
+                </div>
+
+                <div class="service-detail-section">
+                  <h4><span class="section-icon icon-lightbulb"></span>Tax planning et conseils personnalisés</h4>
+                  <ul>
+                    <li>Expertise et analyse personnalisée de votre situation fiscale</li>
+                    <li>Identification des leviers légaux et fiscaux pour valoriser votre situation</li>
+                    <li>Anticipation de vos obligations et optimisation de vos décisions de planification</li>
+                  </ul>
+                </div>
+
+                <p class="service-cta-text">
+                  Avec nous, vos obligations fiscales deviennent claires, maîtrisées et optimisées. Vous gagnez du temps, de la sérénité et la certitude d'être en conformité.
+                </p>
+                <div class="service-cta">
+                  <strong>Prêt à sécuriser et valoriser votre fiscalité personnelle ?</strong>
+                  <a href="contact.html" class="btn btn-primary">Contactez-nous dès aujourd'hui</a>
+                </div>
+              </div>
             </article>
 
-            <article id="service-outsourcing" class="service-item">
+            <!-- Service 02: Comptabilité - TABS DESIGN -->
+            <article id="service-outsourcing" class="service-item-tabs">
               <div class="service-item-header">
                 <span class="service-badge">02</span>
-                <div>
-                  <h3>Outsourcing et gestion comptable</h3>
+                <div class="service-item-title-block">
+                  <h3>Comptabilité et outsourcing</h3>
                   <p class="service-item-intro">
-                    Externalisation sur mesure pour garantir l’exactitude des chiffres, la tenue des échéances et la disponibilité
-                    d’indicateurs clairs.
+                    Libérez-vous des contraintes comptables et administratives et optimisez la gestion de votre entreprise !<br>
+                    Chez DFS Advisory, nous accompagnons les entreprises pour leur permettre de se concentrer sur leur cœur de métier en proposant un service d'outsourcing complet :
                   </p>
                 </div>
               </div>
-              <ul class="service-item-details">
-                <li>Tenue de la comptabilité</li>
-                <li>Bouclement annuel et préparation des états financiers</li>
-                <li>Déclarations fiscales (TVA, ICC, IFD, IA)</li>
-                <li>Payroll: établissement des fiches de paie et déclarations</li>
-                <li>Mandat administratif et préparation des paiements</li>
-              </ul>
+
+              <div class="tabs-container">
+                <div class="tabs-nav" role="tablist">
+                  <button class="tab-btn active" data-tab="compta" role="tab" aria-selected="true">
+                    <span class="tab-icon icon-chart"></span>
+                    <span class="tab-label">Comptabilité</span>
+                  </button>
+                  <button class="tab-btn" data-tab="fiscal" role="tab" aria-selected="false">
+                    <span class="tab-icon icon-euro"></span>
+                    <span class="tab-label">Déclarations</span>
+                  </button>
+                  <button class="tab-btn" data-tab="payroll" role="tab" aria-selected="false">
+                    <span class="tab-icon icon-users"></span>
+                    <span class="tab-label">Payroll</span>
+                  </button>
+                  <button class="tab-btn" data-tab="mandats" role="tab" aria-selected="false">
+                    <span class="tab-icon icon-briefcase"></span>
+                    <span class="tab-label">Mandats</span>
+                  </button>
+                </div>
+
+                <div class="tabs-content">
+                  <div class="tab-panel active" data-panel="compta" role="tabpanel">
+                    <h4><span class="section-icon icon-chart"></span>Comptabilité et reporting financier digital</h4>
+                    <ul>
+                      <li>Tenue de comptabilité gérée avec efficience</li>
+                      <li>Préparation des états financiers fiables et conformes aux normes</li>
+                      <li>Spécialité compta-titres et consolidation de portefeuilles</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-panel" data-panel="fiscal" role="tabpanel">
+                    <h4><span class="section-icon icon-euro"></span>Déclarations fiscales</h4>
+                    <ul>
+                      <li>Conformité fiscale personnes morales (TVA, ICC/IFD, IA)</li>
+                      <li>Réduction des risques d'erreurs et de pénalités</li>
+                      <li>Suivi et contrôle des taxations, réclamations</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-panel" data-panel="payroll" role="tabpanel">
+                    <h4><span class="section-icon icon-users"></span>Payroll et gestion RH</h4>
+                    <ul>
+                      <li>Gestion complète de la paie pour vos équipes</li>
+                      <li>Respect strict des obligations déclaratives</li>
+                    </ul>
+                  </div>
+
+                  <div class="tab-panel" data-panel="mandats" role="tabpanel">
+                    <h4><span class="section-icon icon-briefcase"></span>Mandats administratifs et paiements</h4>
+                    <ul>
+                      <li>Assistance à la préparation et suivi des paiements</li>
+                      <li>Gestion fluide de vos obligations administratives</li>
+                      <li>Suivi de votre comptabilité en temps réel</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <p class="service-cta-text">
+                  Notre mission : vous offrir tranquillité d'esprit, gain de temps et performance.
+                </p>
+                <div class="service-cta">
+                  <strong>Prêt à simplifier votre quotidien et booster votre efficacité ?</strong>
+                  <a href="contact.html" class="btn btn-primary">Contactez-nous dès aujourd'hui</a>
+                </div>
+              </div>
             </article>
 
-            <article id="service-audit" class="service-item">
+            <!-- Service 03: Audit - CARDS GRID DESIGN -->
+            <article id="service-audit" class="service-item-cards">
               <div class="service-item-header">
                 <span class="service-badge">03</span>
-                <div>
-                  <h3>Révision et audit</h3>
+                <div class="service-item-title-block">
+                  <h3>Audit</h3>
                   <p class="service-item-intro">
-                    Missions d’assurance indépendantes réalisées avec rigueur, transparence et souci du détail.
+                    Quand l'audit n'est plus une option : c'est une obligation !<br>
+                    Disposant de l'agrément ASR d'Expert-réviseur et inscrit en tant que membre Expert Suisse, DFS Advisory aide les entreprises à garantir transparence, conformité et fiabilité de leurs états financiers.<br>
+                    Nos services d'audit incluent :
                   </p>
                 </div>
               </div>
-              <ul class="service-item-details">
-                <li>Mandat de contrôle restreint</li>
-                <li>Mandat de contrôle ordinaire</li>
-                <li>Autres missions spécifiques (attestations, liquidation anticipée, augmentation et réduction de capital, etc…)</li>
-              </ul>
+
+              <div class="audit-cards-grid">
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-check-circle"></div>
+                    <h4>Mandat de contrôle restreint</h4>
+                    <p class="audit-card-teaser">Vérification ciblée et synthétique</p>
+                  </div>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-check-circle"></span>Contrôle restreint</h4>
+                    <ul>
+                      <li>Vérification ciblée et synthétique de vos comptes</li>
+                      <li>Sérénité assurée grâce à une sécurisation des données comptables</li>
+                      <li>Conformité aux exigences de la norme de contrôle restreint</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-shield"></div>
+                    <h4>Contrôle ordinaire</h4>
+                    <p class="audit-card-teaser">Audit complet et approfondi</p>
+                  </div>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-shield"></span>Contrôle ordinaire</h4>
+                    <ul>
+                      <li>Audit complet, approfondi et détaillé de vos états financiers</li>
+                      <li>Identification des risques et recommandations concrètes</li>
+                      <li>Assurance raisonnable quant à la conformité aux normes comptables et légales</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-star"></div>
+                    <h4>Autres missions spécifiques</h4>
+                    <p class="audit-card-teaser">Due diligence, attestations...</p>
+                  </div>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-star"></span>Autres missions</h4>
+                    <ul>
+                      <li>Due diligence : rapport stratégique et analyse de risques</li>
+                      <li>Attestations : certification et vérification de situations financières</li>
+                      <li>Liquidation anticipée : accompagnement complet pour la cessation d'activité</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <p class="service-cta-text">
+                Notre engagement : fiabilité et contrôle qualité permanent ! Avec nos experts certifiés, vos comptes sont sécurisés, vos décisions sont éclairées et votre conformité est garantie.
+              </p>
+              <div class="service-cta">
+                <strong>Ne prenez plus aucun risque</strong>
+                <a href="contact.html" class="btn btn-primary">Contactez-nous dès aujourd'hui</a>
+              </div>
             </article>
 
-            <article id="service-autres" class="service-item">
+            <!-- Service 04: Autres - SIMPLE LIST DESIGN -->
+            <article id="service-autres" class="service-item-simple">
               <div class="service-item-header">
                 <span class="service-badge">04</span>
-                <div>
+                <div class="service-item-title-block">
                   <h3>Autres services</h3>
                   <p class="service-item-intro">
-                    Interventions ciblées pour compléter l’accompagnement : gouvernance, représentation et conseil.
+                    DFS Advisory, bien plus qu'une fiduciaire - un service sur mesure !<br>
+                    Nos services fiduciaires couvrent également toutes les autres dimensions essentielles à une gestion globale et sereine de vos activités comme :
                   </p>
                 </div>
               </div>
-              <ul class="service-item-details">
-                <li>Domiciliation de sociétés</li>
-                <li>Mandat d’administrateur ou de directeur</li>
-                <li>Représentation fiscale</li>
-                <li>Conseils</li>
-              </ul>
+
+              <div class="simple-services-list">
+                <div class="simple-service-item">
+                  <div class="simple-service-header">
+                    <span class="simple-service-icon icon-mail"></span>
+                    <h4>Domiciliation et gestion du courrier</h4>
+                  </div>
+                  <ul>
+                    <li>Mise à disposition d'une adresse professionnelle reconnue en Suisse</li>
+                    <li>Réception, traitement et gestion de votre correspondance en toute confidentialité</li>
+                  </ul>
+                </div>
+
+                <div class="simple-service-item">
+                  <div class="simple-service-header">
+                    <span class="simple-service-icon icon-user-tie"></span>
+                    <h4>Mandats d'administrateur ou de directeur</h4>
+                  </div>
+                  <ul>
+                    <li>Prise en charge de mandats au sein d'organes de direction ou d'administration</li>
+                    <li>Implication active dans la gouvernance et la conformité de votre entreprise</li>
+                  </ul>
+                </div>
+
+                <div class="simple-service-item">
+                  <div class="simple-service-header">
+                    <span class="simple-service-icon icon-folder"></span>
+                    <h4>Représentation fiscale</h4>
+                  </div>
+                  <ul>
+                    <li>Gestion des démarches fiscales pour les sociétés étrangères ou non résidentes en matière de TVA</li>
+                    <li>Garantie de conformité et de maîtrise des obligations fiscales</li>
+                  </ul>
+                </div>
+
+                <div class="simple-service-item">
+                  <div class="simple-service-header">
+                    <span class="simple-service-icon icon-lightbulb"></span>
+                    <h4>Conseils personnalisés</h4>
+                  </div>
+                  <ul>
+                    <li>Accompagnement stratégique et opérationnel pour soutenir vos décisions</li>
+                    <li>Analyse et conseils adaptées à votre structure, votre fiscalité et vos objectifs</li>
+                    <li>Une approche proactive pour anticiper, planifier et faire croître votre activité</li>
+                    <li>Accompagnement à la création et transmission d'entreprise</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p class="service-cta-text">
+                Notre mission : vous offrir un partenaire de confiance, capable de vous accompagner dans chaque étape de la vie de votre entreprise.
+              </p>
+              <div class="service-cta">
+                <strong>Simplifiez votre gestion</strong>
+                <a href="contact.html" class="btn btn-primary">Contactez-nous dès aujourd'hui</a>
+              </div>
             </article>
           </div>
 
           <p class="section-note">
-            Ce que nous ne proposons pas: gestion de fortune, services juridiques, gestion immobilière.
+            Ce que nous ne proposons pas : gestion de fortune, services juridiques, gestion immobilière.
           </p>
         </div>
       </section>

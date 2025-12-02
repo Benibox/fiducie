@@ -29,4 +29,47 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Service expandable cards
+  document.querySelectorAll('.service-expand-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const article = btn.closest('.service-item-expandable');
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+      // Toggle expanded state
+      btn.setAttribute('aria-expanded', String(!isExpanded));
+      article.classList.toggle('expanded');
+
+      // Update button text
+      const expandText = btn.querySelector('.expand-text');
+      if (expandText) {
+        expandText.textContent = isExpanded ? 'Voir les détails' : 'Masquer les détails';
+      }
+    });
+  });
+
+  // Tabs functionality (Service 02)
+  document.querySelectorAll('.tab-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const tabName = btn.getAttribute('data-tab');
+      const tabsContainer = btn.closest('.tabs-container');
+
+      // Remove active class from all buttons and panels
+      tabsContainer.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      tabsContainer.querySelectorAll('.tab-panel').forEach(p => {
+        p.classList.remove('active');
+      });
+
+      // Add active class to clicked button and corresponding panel
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      const panel = tabsContainer.querySelector(`[data-panel="${tabName}"]`);
+      if (panel) {
+        panel.classList.add('active');
+      }
+    });
+  });
 });
