@@ -103,6 +103,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1.5rem;
+  padding-left: 6.5rem;
 }
 
 .brand {
@@ -115,7 +116,7 @@ h3 {
   height: 58px;
   width: auto;
   display: block;
-  transform: scale(3);
+  transform: scale(0.96);
   transform-origin: left center;
 }
 
@@ -740,7 +741,7 @@ h3 {
   font-size: 0.9rem;
 }
 
-.service-item-details li + li {
+.service-item-details li+li {
   margin-top: 0.35rem;
 }
 
@@ -962,12 +963,13 @@ h3 {
 }
 
 @media (max-width: 960px) {
-.hero-inner,
-.grid-2,
-.team-panel,
-.pillars-grid,
-.partners-grid,
-.contact-grid,
+
+  .hero-inner,
+  .grid-2,
+  .team-panel,
+  .pillars-grid,
+  .partners-grid,
+  .contact-grid,
   .form-row {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -1053,6 +1055,7 @@ h3 {
     border-radius: 14px;
   }
 }
+
 .landing-visual {
   position: relative;
   min-height: 100vh;
@@ -1068,8 +1071,17 @@ h3 {
 .landing-visual-inner {
   padding: 6rem 1.5rem 6rem;
   width: 100%;
-  transform: translateX(-5rem);
+  transform: translateX(5rem);
 }
+
+.landing-visual-logo img {
+  height: 58px;
+  width: auto;
+  display: block;
+  transform: scale(0.96);
+  margin-top: -2rem;
+}
+
 .landing-portrait {
   display: flex;
   justify-content: center;
@@ -1091,19 +1103,72 @@ h3 {
 }
 
 .landing-visual-title {
-  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-size: clamp(1.5rem, 2.8vw, 3.3rem);
   font-weight: 500;
   margin: 0;
-  max-width: 720px;
+  max-width: 100%;
+  line-height: 1.2;
   white-space: nowrap;
+}
+
+@media (max-width: 1280px) {
+  .landing-visual-inner {
+    transform: translateX(2rem);
+  }
 }
 
 @media (max-width: 820px) {
   .landing-visual-title {
-    white-space: normal;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
   }
 
   .landing-visual-inner {
     transform: none;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-inner {
+    gap: 5rem;
+  }
+
+  .service-teaser-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .service-teaser-item:nth-child(n) {
+    grid-column: span 1;
+  }
+}
+
+/* Mobile Refinements */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .landing-visual-title {
+    font-size: 2.2rem;
+  }
+
+  .section {
+    padding: 3rem 0;
   }
 }
