@@ -64,18 +64,29 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.2rem, 3vw + 1rem, 3rem);
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  font-size: clamp(1.9rem, 2.5vw + 0.8rem, 2.6rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
-.hero h1 {
-  color: var(--white);
-}
+
 
 h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+}
+
+.section-title-main {
+  font-size: 2.4rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+  margin: 0 0 2rem;
+  max-width: 800px;
 }
 
 h3 {
@@ -298,10 +309,33 @@ h3 {
   margin-bottom: 0.75rem;
 }
 
+.hero h1 {
+  color: var(--white);
+  font-size: clamp(2rem, 2.5vw + 0.5rem, 2.6rem);
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  max-width: 650px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
 .hero-subtitle {
-  max-width: 560px;
-  color: rgba(229, 231, 235, 0.9);
-  margin-bottom: 2rem;
+  max-width: 650px;
+  color: rgba(229, 231, 235, 0.95);
+  margin-bottom: 1.2rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  line-height: 1.7;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-subtitle:last-of-type {
+  margin-bottom: 2.5rem;
 }
 
 .hero-actions {
@@ -550,19 +584,27 @@ h3 {
 
 .service-teaser-detail {
   position: absolute;
-  bottom: 1rem;
-  left: 1.5rem;
-  font-size: 0.82rem;
-  color: rgba(15, 23, 42, 0.6);
+  inset: 0;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--white);
+  background: linear-gradient(135deg, rgba(0, 34, 80, 0.95), rgba(0, 48, 107, 0.92));
+  border-radius: 24px;
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
 }
 
 .service-teaser-item:hover .service-teaser-detail,
 .service-teaser-item:focus-visible .service-teaser-detail {
   opacity: 1;
-  transform: translateY(0);
+  transform: scale(1);
 }
 
 .service-teaser-item:focus-visible {
@@ -765,16 +807,23 @@ h3 {
   box-shadow: 0 15px 28px rgba(15, 23, 42, 0.04);
 }
 
-.pillar-card p {
+.pillar-card > p:not(.pillar-quote) {
   margin: 0 0 0.4rem;
   font-size: 0.9rem;
   color: var(--text-soft);
+  text-align: justify;
+  text-justify: inter-word;
+  min-height: 5rem;
 }
 
 .pillar-quote {
   margin-top: 0.7rem;
   font-size: 0.85rem;
-  color: var(--blue-dark);
+  font-weight: 600;
+  color: #000000;
+  font-style: italic;
+  position: relative;
+  text-align: left !important;
 }
 
 .partners-grid {
