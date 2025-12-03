@@ -107,6 +107,7 @@
       <div class="container header-inner">
         <div class="brand">
           <img src="assets/ethan.png" alt="DFS Advisory" class="brand-logo" />
+          <span class="brand-name">DFS Advisory</span>
         </div>
         <nav class="main-nav" id="primary-navigation">
           <a href="index.html#hero">Accueil</a>
@@ -124,16 +125,21 @@
     <main>
       <section class="section">
         <div class="container">
-          <h1 class="section-title-main">Nos services fiduciaires</h1>
-          <p class="section-subtitle">Un accompagnement complet, de la comptabilité à la fiscalité</p>
-          <p class="section-intro" style="max-width: 100%">
-            En tant que fiduciaire, DFS Advisory accompagne les entreprises et les personnes physiques dans la gestion<br />
-            de leurs obligations comptables, fiscales et administratives pour ainsi permettre aux clients de se concentrer sur
-            ce qu’ils
-            font de mieux :
-            <br />
-            Développer leurs entreprises et leurs projets.
-          </p>
+          <div class="section-title-with-accent">
+            <span class="section-title-accent" aria-hidden="true"></span>
+            <div class="section-title-content">
+              <h1>Nos services fiduciaires</h1>
+              <p class="section-subtitle">Un accompagnement complet, de la comptabilité à la fiscalité</p>
+              <p class="section-intro" style="max-width: 100%">
+                En tant que fiduciaire, DFS Advisory accompagne les entreprises et les personnes physiques dans la gestion<br />
+                de leurs obligations comptables, fiscales et administratives pour ainsi permettre aux clients de se concentrer sur
+                ce qu'ils
+                font de mieux :
+                <br />
+                Développer leurs entreprises et leurs projets.
+              </p>
+            </div>
+          </div>
           <div class="hero-actions">
             <a href="contact.html" class="btn btn-primary">Parler à un expert</a>
             <a href="index.html#raisons" class="btn btn-outline">Découvrir notre approche</a>
@@ -145,7 +151,7 @@
         <div class="container">
           <div class="service-list">
             <!-- Service 01: Fiscalité -->
-            <article id="service-fiscalite" class="service-item-expandable">
+            <article id="service-fiscalite" class="service-item-cards">
               <div class="service-item-header">
                 <span class="service-badge">01</span>
                 <div class="service-item-title-block">
@@ -156,54 +162,69 @@
                   </p>
                 </div>
               </div>
-              <button class="service-expand-btn" aria-expanded="false">
-                <span class="expand-text">Voir les détails</span>
-                <svg class="expand-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 7.5l5 5 5-5"/>
-                </svg>
-              </button>
 
-              <div class="service-item-content">
-                <div class="service-detail-section">
-                  <h4><span class="section-icon icon-document"></span>L'établissement et le dépôt des déclarations de revenus et de fortune</h4>
-                  <ul>
-                    <li>Préparation complète et précise de vos déclarations</li>
-                    <li>Dépôt dans les délais légaux pour éviter les risques de pénalité</li>
-                    <li>Gestion des situations complexes avec rigueur et fiabilité</li>
-                    <li>Garantir une conformité fiscale</li>
-                  </ul>
+              <div class="audit-cards-grid">
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-document"></div>
+                    <h4>Déclarations fiscales</h4>
+                    <p class="audit-card-teaser">Établissement et dépôt</p>
+                  </div>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-document"></span>Déclarations</h4>
+                    <ul>
+                      <li>Préparation complète et précise de vos déclarations</li>
+                      <li>Dépôt dans les délais légaux</li>
+                      <li>Gestion des situations complexes</li>
+                      <li>Conformité fiscale garantie</li>
+                    </ul>
+                  </div>
                 </div>
 
-                <div class="service-detail-section">
-                  <h4><span class="section-icon icon-search"></span>Le suivi et le contrôle de la taxation</h4>
-                  <ul>
-                    <li>Vérifications de la décision de taxation et de la justesse de votre imposition</li>
-                    <li>Assistance en cas de demandes de l'administration fiscale</li>
-                    <li>Rédaction des éventuelles réclamations</li>
-                  </ul>
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-search"></div>
+                    <h4>Suivi et contrôle</h4>
+                    <p class="audit-card-teaser">Taxation et réclamations</p>
+                  </div>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-search"></span>Contrôle taxation</h4>
+                    <ul>
+                      <li>Vérification de la justesse de votre imposition</li>
+                      <li>Assistance face à l'administration fiscale</li>
+                      <li>Rédaction des réclamations</li>
+                    </ul>
+                  </div>
                 </div>
 
-                <div class="service-detail-section">
-                  <h4><span class="section-icon icon-lightbulb"></span>Tax planning et conseils personnalisés</h4>
-                  <ul>
-                    <li>Expertise et analyse personnalisée de votre situation fiscale</li>
-                    <li>Identification des leviers légaux et fiscaux pour valoriser votre situation</li>
-                    <li>Anticipation de vos obligations et optimisation de vos décisions de planification</li>
-                  </ul>
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-lightbulb"></div>
+                    <h4>Tax planning</h4>
+                    <p class="audit-card-teaser">Conseils personnalisés</p>
+                  </div>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-lightbulb"></span>Optimisation</h4>
+                    <ul>
+                      <li>Analyse personnalisée de votre situation</li>
+                      <li>Identification des leviers fiscaux</li>
+                      <li>Anticipation et planification</li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
 
-                <p class="service-cta-text">
-                  Avec nous, vos obligations fiscales deviennent claires, maîtrisées et optimisées. Vous gagnez du temps, de la sérénité et la certitude d'être en conformité.
-                </p>
-                <div class="service-cta">
-                  <strong>Prêt à sécuriser et valoriser votre fiscalité personnelle ?</strong>
-                  <a href="contact.html" class="btn btn-primary">Contactez-nous dès aujourd'hui</a>
-                </div>
+              <p class="service-cta-text">
+                Avec nous, vos obligations fiscales deviennent claires, maîtrisées et optimisées. Vous gagnez du temps, de la sérénité et la certitude d'être en conformité.
+              </p>
+              <div class="service-cta">
+                <strong>Prêt à sécuriser et valoriser votre fiscalité personnelle ?</strong>
+                <a href="contact.html" class="btn btn-primary">Contactez-nous dès aujourd'hui</a>
               </div>
             </article>
 
-            <!-- Service 02: Comptabilité - TABS DESIGN -->
-            <article id="service-outsourcing" class="service-item-tabs">
+            <!-- Service 02: Comptabilité -->
+            <article id="service-outsourcing" class="service-item-cards">
               <div class="service-item-header">
                 <span class="service-badge">02</span>
                 <div class="service-item-title-block">
@@ -215,70 +236,78 @@
                 </div>
               </div>
 
-              <div class="tabs-container">
-                <div class="tabs-nav" role="tablist">
-                  <button class="tab-btn active" data-tab="compta" role="tab" aria-selected="true">
-                    <span class="tab-icon icon-chart"></span>
-                    <span class="tab-label">Comptabilité</span>
-                  </button>
-                  <button class="tab-btn" data-tab="fiscal" role="tab" aria-selected="false">
-                    <span class="tab-icon icon-euro"></span>
-                    <span class="tab-label">Déclarations</span>
-                  </button>
-                  <button class="tab-btn" data-tab="payroll" role="tab" aria-selected="false">
-                    <span class="tab-icon icon-users"></span>
-                    <span class="tab-label">Payroll</span>
-                  </button>
-                  <button class="tab-btn" data-tab="mandats" role="tab" aria-selected="false">
-                    <span class="tab-icon icon-briefcase"></span>
-                    <span class="tab-label">Mandats</span>
-                  </button>
-                </div>
-
-                <div class="tabs-content">
-                  <div class="tab-panel active" data-panel="compta" role="tabpanel">
-                    <h4><span class="section-icon icon-chart"></span>Comptabilité et reporting financier digital</h4>
-                    <ul>
-                      <li>Tenue de comptabilité gérée avec efficience</li>
-                      <li>Préparation des états financiers fiables et conformes aux normes</li>
-                      <li>Spécialité compta-titres et consolidation de portefeuilles</li>
-                    </ul>
+              <div class="audit-cards-grid">
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-chart"></div>
+                    <h4>Comptabilité</h4>
+                    <p class="audit-card-teaser">Reporting financier digital</p>
                   </div>
-
-                  <div class="tab-panel" data-panel="fiscal" role="tabpanel">
-                    <h4><span class="section-icon icon-euro"></span>Déclarations fiscales</h4>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-chart"></span>Comptabilité</h4>
                     <ul>
-                      <li>Conformité fiscale personnes morales (TVA, ICC/IFD, IA)</li>
-                      <li>Réduction des risques d'erreurs et de pénalités</li>
-                      <li>Suivi et contrôle des taxations, réclamations</li>
-                    </ul>
-                  </div>
-
-                  <div class="tab-panel" data-panel="payroll" role="tabpanel">
-                    <h4><span class="section-icon icon-users"></span>Payroll et gestion RH</h4>
-                    <ul>
-                      <li>Gestion complète de la paie pour vos équipes</li>
-                      <li>Respect strict des obligations déclaratives</li>
-                    </ul>
-                  </div>
-
-                  <div class="tab-panel" data-panel="mandats" role="tabpanel">
-                    <h4><span class="section-icon icon-briefcase"></span>Mandats administratifs et paiements</h4>
-                    <ul>
-                      <li>Assistance à la préparation et suivi des paiements</li>
-                      <li>Gestion fluide de vos obligations administratives</li>
-                      <li>Suivi de votre comptabilité en temps réel</li>
+                      <li>Tenue de comptabilité avec efficience</li>
+                      <li>États financiers conformes aux normes</li>
+                      <li>Compta-titres et consolidation</li>
                     </ul>
                   </div>
                 </div>
 
-                <p class="service-cta-text">
-                  Notre mission : vous offrir tranquillité d'esprit, gain de temps et performance.
-                </p>
-                <div class="service-cta">
-                  <strong>Prêt à simplifier votre quotidien et booster votre efficacité ?</strong>
-                  <a href="contact.html" class="btn btn-primary">Contactez-nous dès aujourd'hui</a>
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-euro"></div>
+                    <h4>Déclarations fiscales</h4>
+                    <p class="audit-card-teaser">TVA, ICC/IFD, IA</p>
+                  </div>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-euro"></span>Fiscalité PM</h4>
+                    <ul>
+                      <li>Conformité fiscale personnes morales</li>
+                      <li>Réduction des risques d'erreurs</li>
+                      <li>Suivi des taxations et réclamations</li>
+                    </ul>
+                  </div>
                 </div>
+
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-users"></div>
+                    <h4>Payroll et RH</h4>
+                    <p class="audit-card-teaser">Gestion de la paie</p>
+                  </div>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-users"></span>Payroll</h4>
+                    <ul>
+                      <li>Gestion complète de la paie</li>
+                      <li>Respect des obligations déclaratives</li>
+                      <li>Support administratif RH</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-briefcase"></div>
+                    <h4>Mandats administratifs</h4>
+                    <p class="audit-card-teaser">Paiements et suivi</p>
+                  </div>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-briefcase"></span>Mandats</h4>
+                    <ul>
+                      <li>Préparation et suivi des paiements</li>
+                      <li>Gestion des obligations administratives</li>
+                      <li>Suivi comptable en temps réel</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <p class="service-cta-text">
+                Notre mission : vous offrir tranquillité d'esprit, gain de temps et performance.
+              </p>
+              <div class="service-cta">
+                <strong>Prêt à simplifier votre quotidien et booster votre efficacité ?</strong>
+                <a href="contact.html" class="btn btn-primary">Contactez-nous dès aujourd'hui</a>
               </div>
             </article>
 
@@ -355,8 +384,8 @@
               </div>
             </article>
 
-            <!-- Service 04: Autres - SIMPLE LIST DESIGN -->
-            <article id="service-autres" class="service-item-simple">
+            <!-- Service 04: Autres services -->
+            <article id="service-autres" class="service-item-cards">
               <div class="service-item-header">
                 <span class="service-badge">04</span>
                 <div class="service-item-title-block">
@@ -368,51 +397,69 @@
                 </div>
               </div>
 
-              <div class="simple-services-list">
-                <div class="simple-service-item">
-                  <div class="simple-service-header">
-                    <span class="simple-service-icon icon-mail"></span>
-                    <h4>Domiciliation et gestion du courrier</h4>
+              <div class="audit-cards-grid">
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-mail"></div>
+                    <h4>Domiciliation</h4>
+                    <p class="audit-card-teaser">Gestion du courrier</p>
                   </div>
-                  <ul>
-                    <li>Mise à disposition d'une adresse professionnelle reconnue en Suisse</li>
-                    <li>Réception, traitement et gestion de votre correspondance en toute confidentialité</li>
-                  </ul>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-mail"></span>Domiciliation</h4>
+                    <ul>
+                      <li>Adresse professionnelle en Suisse</li>
+                      <li>Gestion de votre correspondance</li>
+                      <li>Confidentialité garantie</li>
+                    </ul>
+                  </div>
                 </div>
 
-                <div class="simple-service-item">
-                  <div class="simple-service-header">
-                    <span class="simple-service-icon icon-user-tie"></span>
-                    <h4>Mandats d'administrateur ou de directeur</h4>
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-user-tie"></div>
+                    <h4>Mandats</h4>
+                    <p class="audit-card-teaser">Administrateur / Directeur</p>
                   </div>
-                  <ul>
-                    <li>Prise en charge de mandats au sein d'organes de direction ou d'administration</li>
-                    <li>Implication active dans la gouvernance et la conformité de votre entreprise</li>
-                  </ul>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-user-tie"></span>Mandats</h4>
+                    <ul>
+                      <li>Direction et administration</li>
+                      <li>Gouvernance d'entreprise</li>
+                      <li>Conformité assurée</li>
+                    </ul>
+                  </div>
                 </div>
 
-                <div class="simple-service-item">
-                  <div class="simple-service-header">
-                    <span class="simple-service-icon icon-folder"></span>
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-folder"></div>
                     <h4>Représentation fiscale</h4>
+                    <p class="audit-card-teaser">TVA pour non-résidents</p>
                   </div>
-                  <ul>
-                    <li>Gestion des démarches fiscales pour les sociétés étrangères ou non résidentes en matière de TVA</li>
-                    <li>Garantie de conformité et de maîtrise des obligations fiscales</li>
-                  </ul>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-folder"></span>Représentation</h4>
+                    <ul>
+                      <li>Démarches fiscales sociétés étrangères</li>
+                      <li>Conformité TVA</li>
+                      <li>Maîtrise des obligations</li>
+                    </ul>
+                  </div>
                 </div>
 
-                <div class="simple-service-item">
-                  <div class="simple-service-header">
-                    <span class="simple-service-icon icon-lightbulb"></span>
+                <div class="audit-card">
+                  <div class="audit-card-front">
+                    <div class="audit-card-icon icon-lightbulb"></div>
                     <h4>Conseils personnalisés</h4>
+                    <p class="audit-card-teaser">Accompagnement stratégique</p>
                   </div>
-                  <ul>
-                    <li>Accompagnement stratégique et opérationnel pour soutenir vos décisions</li>
-                    <li>Analyse et conseils adaptées à votre structure, votre fiscalité et vos objectifs</li>
-                    <li>Une approche proactive pour anticiper, planifier et faire croître votre activité</li>
-                    <li>Accompagnement à la création et transmission d'entreprise</li>
-                  </ul>
+                  <div class="audit-card-back">
+                    <h4><span class="section-icon icon-lightbulb"></span>Conseils</h4>
+                    <ul>
+                      <li>Accompagnement stratégique</li>
+                      <li>Analyses adaptées à vos objectifs</li>
+                      <li>Création et transmission d'entreprise</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const footerCopy = document.querySelector('.footer-copy span');
   const navToggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.main-nav');
+  const header = document.querySelector('.site-header');
 
   if (footerCopy) {
     footerCopy.textContent = footerCopy.textContent.replace('{year}', new Date().getFullYear());
@@ -12,6 +13,36 @@ document.addEventListener('DOMContentLoaded', () => {
       const isOpen = nav.classList.toggle('nav-open');
       navToggle.classList.toggle('nav-open', isOpen);
       navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+
+  // Hide/Show header on scroll
+  if (header) {
+    let lastScroll = 0;
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScroll = window.pageYOffset;
+
+          if (currentScroll <= 0) {
+            // At the top of the page
+            header.classList.remove('header-hidden');
+          } else if (currentScroll > lastScroll && currentScroll > 100) {
+            // Scrolling down & past 100px
+            header.classList.add('header-hidden');
+          } else if (currentScroll < lastScroll) {
+            // Scrolling up
+            header.classList.remove('header-hidden');
+          }
+
+          lastScroll = currentScroll;
+          ticking = false;
+        });
+
+        ticking = true;
+      }
     });
   }
 
