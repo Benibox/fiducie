@@ -810,105 +810,121 @@ h3 {
 /* Section équipe - Design sobre et compact */
 .team-grid-new {
   display: grid;
-  grid-template-columns: 400px 1fr;
-  grid-template-rows: auto auto;
-  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
   margin-top: 2.5rem;
-  max-width: 900px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  align-items: stretch;
 }
 
 .team-member {
   background: #ffffff;
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 14px;
+  padding: 0;
   border: 1px solid var(--border-soft);
-  box-shadow: 0 2px 8px rgba(0, 34, 80, 0.06);
-  transition: all 0.2s ease;
+  box-shadow: 0 10px 25px rgba(0, 34, 80, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
   text-align: center;
+  width: 100%;
+  max-width: 360px;
+  justify-self: center;
+  overflow: hidden;
 }
 
 .team-member:hover {
-  box-shadow: 0 4px 12px rgba(0, 34, 80, 0.1);
-  border-color: var(--blue-dark);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 34, 80, 0.1);
 }
 
 /* Dominik - Carré à gauche */
 .team-member-lead {
-  grid-column: 1;
-  grid-row: 1 / 3;
+  grid-column: auto;
+  grid-row: auto;
+  max-width: 360px;
+  width: 100%;
 }
 
 .team-member-photo-wrapper {
-  margin-bottom: 1rem;
+  width: 100%;
+  height: 230px;
+  background: var(--beige-soft);
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .team-member-photo {
-  width: 140px;
-  height: 140px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
 }
 
 .team-member-lead .team-member-photo {
-  width: 180px;
-  height: 180px;
+  width: 100%;
+  height: 100%;
+}
+
+.team-member-body {
+  padding: 1.2rem 1.3rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+  flex: 1;
 }
 
 .team-member-name {
-  margin: 0 0 0.3rem;
+  margin: 0;
   font-size: 1.05rem;
   color: var(--blue-deep);
-  font-weight: 600;
-}
-
-.team-member-lead .team-member-name {
-  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .team-member-role {
-  margin: 0 0 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 600;
+  margin: 0.15rem auto 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
   color: var(--blue-dark);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  padding: 0.25rem 0.7rem;
+  padding: 0.32rem 1rem;
   background: var(--blue-soft);
   border-radius: 999px;
-  display: inline-block;
+  line-height: 1.3;
+  max-width: 260px;
 }
 
 .team-member-title {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.92rem;
   color: var(--text-soft);
-  line-height: 1.4;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .team-member-lead .team-member-title {
-  font-size: 0.85rem;
+  white-space: nowrap;
+  font-size: 0.9rem;
 }
 
 .team-member-bio {
-  margin: 0.8rem 0 0;
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: var(--text-soft);
-  padding-top: 0.8rem;
+  margin: 0.85rem 0 0;
+  padding-top: 0.9rem;
   border-top: 1px solid var(--border-soft);
-}
-
-.team-member-lead .team-member-bio {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+  text-align: center;
 }
 
 .service-list {
@@ -1194,8 +1210,15 @@ h3 {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===== CARDS GRID DESIGN (Service 03) ===== */
@@ -1385,19 +1408,57 @@ h3 {
   flex-shrink: 0;
 }
 
-.icon-document::before { content: "📄"; }
-.icon-search::before { content: "🔍"; }
-.icon-lightbulb::before { content: "💡"; }
-.icon-chart::before { content: "📊"; }
-.icon-euro::before { content: "€"; }
-.icon-users::before { content: "👥"; }
-.icon-briefcase::before { content: "💼"; }
-.icon-check-circle::before { content: "✓"; }
-.icon-shield::before { content: "🛡"; }
-.icon-star::before { content: "⭐"; }
-.icon-mail::before { content: "✉"; }
-.icon-user-tie::before { content: "👔"; }
-.icon-folder::before { content: "📁"; }
+.icon-document::before {
+  content: "📄";
+}
+
+.icon-search::before {
+  content: "🔍";
+}
+
+.icon-lightbulb::before {
+  content: "💡";
+}
+
+.icon-chart::before {
+  content: "📊";
+}
+
+.icon-euro::before {
+  content: "€";
+}
+
+.icon-users::before {
+  content: "👥";
+}
+
+.icon-briefcase::before {
+  content: "💼";
+}
+
+.icon-check-circle::before {
+  content: "✓";
+}
+
+.icon-shield::before {
+  content: "🛡";
+}
+
+.icon-star::before {
+  content: "⭐";
+}
+
+.icon-mail::before {
+  content: "✉";
+}
+
+.icon-user-tie::before {
+  content: "👔";
+}
+
+.icon-folder::before {
+  content: "📁";
+}
 
 .tab-icon {
   display: inline-flex;
@@ -1459,6 +1520,7 @@ h3 {
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-soft);
   padding: 1.5rem 1.4rem 1.6rem;
+  min-height: 320px;
   background: #ffffff;
   box-shadow: 0 15px 28px rgba(15, 23, 42, 0.04);
   display: flex;
@@ -1478,7 +1540,7 @@ h3 {
   overflow-wrap: normal;
 }
 
-.pillar-card > p:not(.pillar-quote) {
+.pillar-card>p:not(.pillar-quote) {
   margin: 0 0 0.4rem;
   font-size: 0.95rem;
   color: var(--text-soft);
@@ -1495,21 +1557,22 @@ h3 {
 
 .pillar-quote {
   margin-top: auto;
-  padding-top: 0.7rem;
+  padding-top: 1.1rem;
   font-size: 0.95rem;
   font-weight: 600;
   color: #000000;
   font-style: italic;
   position: relative;
   text-align: center !important;
+  transform: translateY(0.35rem);
 }
 
 .pillar-quote-lifted {
-  transform: translateY(-1.5rem);
+  transform: translateY(0.35rem);
 }
 
 .pillar-quote-lifted-more {
-  transform: translateY(-2.9rem);
+  transform: translateY(0.35rem);
 }
 
 /* ===== PARTNERS LOGOS INLINE ===== */
