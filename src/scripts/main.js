@@ -1,4 +1,16 @@
+import emailjs from '@emailjs/browser';
+
+// Initialize EmailJS with your public key
+const initEmailJS = () => {
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  if (publicKey) {
+    emailjs.init(publicKey);
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize EmailJS
+  initEmailJS();
   const footerCopy = document.querySelector('.footer-copy span');
   const navToggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.main-nav');
@@ -103,4 +115,58 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Contact form handler
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const formNote = contactForm.querySelector('.form-note');
+      const originalButtonText = submitButton.textContent;
+
+      // Disable button and show loading state
+      submitButton.disabled = true;
+      submitButton.textContent = 'Envoi en cours...';
+
+      // Remove any existing messages
+      const existingMessages = contactForm.querySelectorAll('.form-message');
+      existingMessages.forEach(msg => msg.remove());
+
+      try {
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
+        if (!serviceId || !templateId) {
+          throw new Error('EmailJS configuration is missing. Please check your .env file.');
+        }
+
+        // Send email using EmailJS
+        await emailjs.sendForm(serviceId, templateId, contactForm);
+
+        // Show success message
+        const successMessage = document.createElement('p');
+        successMessage.className = 'form-message form-success';
+        successMessage.textContent = 'Message envoyé avec succès! Nous vous répondrons rapidement.';
+        formNote.insertAdjacentElement('beforebegin', successMessage);
+
+        // Reset form
+        contactForm.reset();
+
+      } catch (error) {
+        console.error('Error sending email:', error);
+
+        // Show error message
+        const errorMessage = document.createElement('p');
+        errorMessage.className = 'form-message form-error';
+        errorMessage.textContent = 'Une erreur est survenue. Veuillez réessayer ou nous contacter directement par email.';
+        formNote.insertAdjacentElement('beforebegin', errorMessage);
+      } finally {
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+    });
+  }
 });

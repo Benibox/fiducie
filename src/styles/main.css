@@ -209,6 +209,40 @@ h3 {
   padding-left: 6.5rem;
 }
 
+.lang-switch {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  gap: 0.14rem;
+  z-index: 50;
+  background: rgba(0, 34, 80, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 999px;
+  padding: 0.12rem 0.22rem;
+  box-shadow: 0 10px 25px rgba(0, 34, 80, 0.2);
+}
+
+.lang-link {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.44rem;
+  border-radius: 999px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.lang-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.lang-link.active {
+  background: var(--beige);
+  color: var(--blue-deep);
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -233,8 +267,9 @@ h3 {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 1.1rem;
-  font-size: 0.85rem;
+  gap: 0.9rem;
+  font-size: 0.82rem;
+  white-space: nowrap;
 }
 
 .main-nav a {
@@ -567,6 +602,26 @@ h3 {
   align-items: flex-start;
 }
 
+.vision-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.vision-grid > * {
+  height: 100%;
+}
+
+.vision-grid .quote-block,
+.vision-grid .founder-card {
+  height: 100%;
+}
+
+.vision-grid .founder-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .quote-block {
   background: rgba(255, 255, 255, 0.8);
   border-radius: var(--radius-lg);
@@ -584,6 +639,43 @@ h3 {
 
 .quote-block p:last-child {
   margin-bottom: 0;
+}
+
+.legal-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.legal-card {
+  background: #ffffff;
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  padding: 1.4rem 1.5rem;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+.legal-card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+  color: var(--blue-deep);
+}
+
+.legal-card p {
+  margin: 0 0 0.65rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.legal-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.legal-card ul li {
+  margin-bottom: 0.35rem;
 }
 
 .service-teaser {
@@ -781,6 +873,136 @@ h3 {
   text-justify: inter-word;
 }
 
+.founder-profile {
+  background: #ffffff;
+  color: var(--text-main);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.5rem;
+  box-shadow: 0 12px 28px rgba(0, 34, 80, 0.08);
+  border: 1px solid var(--border-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.founder-profile::after {
+  content: none;
+}
+
+.founder-profile-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.founder-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 6px;
+  border: 1px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 34, 80, 0.08);
+}
+
+.founder-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.founder-tag {
+  margin: 0;
+  font-size: 0.73rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-dark);
+}
+
+.founder-profile .founder-name {
+  color: var(--blue-deep);
+  font-size: 1.18rem;
+  margin: 0.15rem 0 0.15rem;
+}
+
+.founder-profile .founder-role {
+  color: var(--text-soft);
+  margin: 0 0 0.4rem;
+  font-size: 0.93rem;
+}
+
+.founder-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.founder-badge {
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  padding: 0.18rem 0.52rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  border: 1px solid rgba(0, 34, 80, 0.08);
+}
+
+.founder-section-title {
+  margin: 0 0 0.35rem;
+  font-size: 0.98rem;
+  color: var(--blue-deep);
+}
+
+.founder-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.founder-points li {
+  position: relative;
+  padding-left: 1.3rem;
+  color: var(--text-soft);
+  line-height: 1.55;
+}
+
+.founder-points li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--blue-dark);
+  font-weight: 700;
+}
+
+.founder-quote-highlight {
+  margin: 0;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid var(--blue-dark);
+  background: var(--beige-soft);
+  border-radius: 12px;
+  color: var(--blue-deep);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.founder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
 .placeholder-photo {
   width: 96px;
   height: 96px;
@@ -803,6 +1025,12 @@ h3 {
   object-position: center;
   margin: 0 auto 1.5rem;
   display: block;
+}
+
+.founder-photo-bubble {
+  max-width: 320px;
+  margin: 0 auto 1.2rem;
+  height: 207px;
 }
 
 .founder-name {
@@ -859,8 +1087,8 @@ h3 {
 
 .team-member-photo-wrapper {
   width: 100%;
-  height: 207px;
-  background: var(--beige-soft);
+  padding: 0.75rem 0 1rem;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -868,9 +1096,10 @@ h3 {
 }
 
 .team-member-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 78%;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
   object-position: center;
   border-radius: 0;
   border: none;
@@ -878,8 +1107,8 @@ h3 {
 }
 
 .team-member-lead .team-member-photo {
-  width: 100%;
-  height: 100%;
+  width: 78%;
+  max-height: 180px;
 }
 
 .team-member-body {
@@ -1852,6 +2081,38 @@ h3 {
   margin-top: 0.7rem;
   font-size: 0.78rem;
   color: rgba(209, 213, 219, 0.8);
+}
+
+.form-message {
+  margin-top: 1rem;
+  padding: 0.875rem 1.125rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-success {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: rgb(134, 239, 172);
+}
+
+.form-error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: rgb(252, 165, 165);
 }
 
 .site-footer {
