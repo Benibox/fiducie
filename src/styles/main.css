@@ -33,25 +33,14 @@ body {
   font-size: 18px;
 }
 
+/* Plus de padding-top global sur main */
 main {
-  padding-top: 80px;
-}
-
-main:has(.landing-visual) {
   padding-top: 0;
 }
 
 @media (max-width: 768px) {
   body {
     font-size: 17px;
-  }
-
-  main {
-    padding-top: 70px;
-  }
-
-  main:has(.landing-visual) {
-    padding-top: 0;
   }
 }
 
@@ -191,7 +180,7 @@ h3 {
   right: 0;
   z-index: 30;
   backdrop-filter: blur(14px);
-  background: rgba(0, 34, 80, 0.9);
+  background: rgba(0, 48, 107, 0.9);
   color: var(--white);
   transition: transform 0.3s ease-in-out;
   transform: translateY(0);
@@ -1953,9 +1942,11 @@ h3 {
   color: var(--blue-dark);
 }
 
+/* On décale seulement le contenu de la section contact */
 .contact-section {
   background: radial-gradient(circle at 0% 0%, rgba(0, 34, 80, 0.14), transparent 58%), #002250;
   color: var(--white);
+  padding-top: 80px; /* décale le h1 sans créer de bande blanche */
 }
 
 .contact-grid {
@@ -2193,6 +2184,10 @@ h3 {
   .header-inner {
     padding-inline: 1rem;
     padding-left: 1rem;
+  }
+
+  .contact-section {
+    padding-top: 70px;
   }
 
   .brand-logo {
