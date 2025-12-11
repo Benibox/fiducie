@@ -195,7 +195,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1.5rem;
-  padding-left: 6.5rem;
+  padding-left: 1.5rem;
 }
 
 .lang-switch {
@@ -259,6 +259,7 @@ h3 {
   gap: 0.9rem;
   font-size: 0.82rem;
   white-space: nowrap;
+  margin-right: 5rem;
 }
 
 .main-nav a {
