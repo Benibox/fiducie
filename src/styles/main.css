@@ -596,7 +596,7 @@ h3 {
   align-items: stretch;
 }
 
-.vision-grid > * {
+.vision-grid>* {
   height: 100%;
 }
 
@@ -862,135 +862,116 @@ h3 {
   text-justify: inter-word;
 }
 
-.founder-profile {
+/* Founder Card - Compact and Professional */
+.founder-card {
   background: #ffffff;
-  color: var(--text-main);
   border-radius: var(--radius-lg);
-  padding: 1.6rem 1.5rem;
-  box-shadow: 0 12px 28px rgba(0, 34, 80, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 34, 80, 0.06);
   border: 1px solid var(--border-soft);
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
-  position: relative;
   overflow: hidden;
 }
 
-.founder-profile::after {
-  content: none;
-}
-
-.founder-profile-header {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-.founder-avatar {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background: #ffffff;
-  padding: 6px;
-  border: 1px solid var(--border-soft);
+.founder-card-photo {
+  width: 100%;
+  padding: 1.5rem 1.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 34, 80, 0.08);
+  background: transparent;
 }
 
-.founder-avatar img {
-  width: 100%;
-  height: 100%;
+.founder-card-photo img {
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   object-position: center;
+  border-radius: 50%;
+  border: 2px solid var(--border-soft);
+  background: #ffffff;
+  padding: 4px;
 }
 
-.founder-tag {
+.founder-card-content {
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  text-align: center;
+}
+
+.founder-card-label {
   margin: 0;
-  font-size: 0.73rem;
-  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--blue-dark);
+  font-weight: 600;
 }
 
-.founder-profile .founder-name {
+.founder-card-name {
   color: var(--blue-deep);
-  font-size: 1.18rem;
-  margin: 0.15rem 0 0.15rem;
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
-.founder-profile .founder-role {
+.founder-card-title {
   color: var(--text-soft);
-  margin: 0 0 0.4rem;
-  font-size: 0.93rem;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
 }
 
-.founder-badges {
+.founder-card-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .founder-badge {
   background: var(--blue-soft);
   color: var(--blue-dark);
-  padding: 0.18rem 0.52rem;
+  padding: 0.2rem 0.55rem;
   border-radius: 999px;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   border: 1px solid rgba(0, 34, 80, 0.08);
+  font-weight: 500;
 }
 
-.founder-section-title {
-  margin: 0 0 0.35rem;
-  font-size: 0.98rem;
-  color: var(--blue-deep);
-}
-
-.founder-points {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.founder-card-text {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.65rem;
+  text-align: left;
 }
 
-.founder-points li {
-  position: relative;
-  padding-left: 1.3rem;
-  color: var(--text-soft);
-  line-height: 1.55;
-}
-
-.founder-points li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--blue-dark);
-  font-weight: 700;
-}
-
-.founder-quote-highlight {
+.founder-card-text p {
   margin: 0;
-  padding: 0.8rem 1rem;
-  border-left: 3px solid var(--blue-dark);
-  background: var(--beige-soft);
-  border-radius: 12px;
-  color: var(--blue-deep);
-  font-style: italic;
+  color: var(--text-soft);
   line-height: 1.5;
+  font-size: 0.88rem;
 }
 
 .founder-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
 }
+
+.btn-small {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.85rem;
+}
+
+
+
 
 .placeholder-photo {
   width: 96px;
@@ -1946,7 +1927,8 @@ h3 {
 .contact-section {
   background: radial-gradient(circle at 0% 0%, rgba(0, 34, 80, 0.14), transparent 58%), #002250;
   color: var(--white);
-  padding-top: 80px; /* décale le h1 sans créer de bande blanche */
+  padding-top: 80px;
+  /* décale le h1 sans créer de bande blanche */
 }
 
 .contact-grid {
@@ -2088,6 +2070,7 @@ h3 {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
